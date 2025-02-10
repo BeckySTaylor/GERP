@@ -1,4 +1,4 @@
-# GERP
+# Modified GERP program
 A modified Genomic Evolutionary Rate Profiling (GERP) pipeline for the analysis of genetic load in wildlife species
 
 The original version of GERP++ is available here: https://github.com/tvkent/GERPplusplus
