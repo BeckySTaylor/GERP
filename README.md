@@ -7,4 +7,4 @@ To facilitate the analysis of genetic load, we provide a script to automate inpu
 
 Specifically, our modified version can handle missing data in the alignments and outputs the position for each score, as well as the allele for three specified sister species to enable the detection of derived alleles. The outputs also have a header row included to indicate what each row pertains to.
 
-The protocol outlining the extact steps involved and how to do them is also included.
+The protocol outlining the extact steps involved and how to do them is also included in the document named 'Taylor_etal_Protocol_modified_GERP', and an example control file is included named 'Control_example.tsv'.
