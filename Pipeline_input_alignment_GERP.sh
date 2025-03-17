@@ -22,7 +22,7 @@
 
         # If you do wish to change the reference genome used, put the file in the directory specified by your 'path'
         # variable and set the 'ref' variable to that filename:
-        ref=Rangifer_tarandus_10and11.fasta
+        ref=Reference_genome.fasta
 
         # !! the number of scaffolds you would like to analyze (i.e., the number of autosomes in the subject genome) minus 1 as the counting starts at 0.
 	chr=34
@@ -74,15 +74,11 @@ cat $control | while read genome species; do
                 -o ${species}_filtered_sorted.bam
 
         # 2.4 Generate one fasta file per scaffold #
-        htsbox pileup \
-                -f ../${ref} \
-                -R \
-                -q 30 \
-                -Q 30 \
-                -l 35 \
-                -s 1 \
-                ${species}_filtered_sorted.bam > ${species}_filtered_sorted.fasta
-
+samtools consensus \
+                -f fasta \
+                --min-MQ 30 \
+                --min-BQ 30 \
+                -o ${species}_filtered_sorted.fasta ${species}_filtered_sorted.bam
         csplit \
                 -s -n 1 --prefix=${species}_Scaffold \
                 -z ${species}_filtered_sorted.fasta '/>/' '{*}'
