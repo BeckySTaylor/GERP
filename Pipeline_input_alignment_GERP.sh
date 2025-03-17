@@ -88,8 +88,7 @@ samtools consensus \
         xargs \
                 -n1 \
                 sed \
-                        -i "s/>Scaffold_.*/>${species}/"
-
+                         -i "1s/.*/>${species}/"
         cd $path
 
 done
