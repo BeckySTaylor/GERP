@@ -1,0 +1,5 @@
+/path/to/file.vcf
+/path/to/file.rates
+0
+out_name
+8
