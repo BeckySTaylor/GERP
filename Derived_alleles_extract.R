@@ -16,7 +16,7 @@ gt2 %<>%
 
 sca = fread("./Scaffold15.fasta.rates", nThread = 8) %>%
   mutate(Pos = Pos + 1) %>%
-  filter(V2 > 2)
+  filter(V2 > 0)
 
 sams = gt2$Indiv %>% unique();
 
