@@ -27,6 +27,9 @@
         # !! the number of scaffolds you would like to analyze (i.e., the number of autosomes in the subject genome) minus 1 as the counting starts at 0.
 	chr=34
 
+ 	#How many cores will be used, specifically for the alignment step in bwa.
+        cores=10
+
 }
 
 
@@ -61,7 +64,7 @@ cat $control | while read genome species; do
 
         # 2.3 Generate BAM file #
         bwa mem \
-                -t 32 \
+                -t ${cores} \
                 -B 3 \
                 -O 4,4 \
                 ../${ref} \
