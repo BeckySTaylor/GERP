@@ -24,7 +24,7 @@
         # variable and set the 'ref' variable to that filename:
         ref=Reference_genome.fasta
 
-        # !! the number of scaffolds you would like to analyze (i.e., the number of autosomes in the subject genome) minus 1 as the counting starts at 0.
+        # !! the number of scaffolds you would like to analyze (i.e., the number of autosomes in the subject genome).
 	chr=34
 
  	#How many cores will be used, specifically for the alignment step in bwa.
@@ -102,7 +102,7 @@ done
 ################################################
 
 # For each scaffold, create a file that contains the sequence belonging to all species in the analysis:
-for i in $(seq 0 ${chr}); do
+for i in $(seq 0 $(($chr-1))); do
 
         cat */*_Scaffold$i | \
         awk '/^>/ {printf("\n%s\n",$0);next } { printf("%s",$0)} END {printf("\n")}'| \
