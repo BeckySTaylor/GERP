@@ -9,4 +9,4 @@ Specifically, our modified version can handle missing data in the alignments and
 
 The protocol outlining the extact steps involved and how to do them is also included in the document named 'Taylor_etal_Protocol_modified_GERP'. Some example files, including control files for both the bash and R scripts, are included in the 'Example_files' folder.
 
-We have included the 'gerpcol.cc' file which is the part of the program we have modified so users can see the code and track any future changes. However, it is important to download 'gerp_modified.tar.gz' and compile the prgram fully for usage.
+We have included the 'gerpcol.cc' file which is the part of the program we have modified so users can see the code and track any future changes. However, it is important to download 'gerp_modified_Mar2025.tar.gz' and compile the prgram fully for usage.
