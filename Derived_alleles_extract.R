@@ -38,8 +38,8 @@ gt2 %<>%
 
 sca = fread(ctrl[2,1], nThread = as.numeric(ctrl[5,1])) %>%
   mutate(Pos = Pos + 1) %>%
-  filter(V2 != -1) %>%
-  filter(V2 > as.numeric(ctrl[3,1]))
+  filter(RS_score != -1) %>%
+  filter(RS_score > as.numeric(ctrl[3,1]))
 
 sams = gt2$Indiv %>% unique();
 
