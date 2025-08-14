@@ -77,7 +77,7 @@ cat $control | while read genome species; do
                 -o ${species}_filtered_sorted.bam
 
         # 2.4 Generate one fasta file per scaffold #
-samtools consensus \
+		samtools consensus \
                 -f fasta \
                 --min-MQ 30 \
                 --min-BQ 30 \
